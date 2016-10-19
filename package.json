@@ -1,6 +1,6 @@
 {
   "name": "express-middelware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It returns a Express App as function use able by DIREKTSPEED Server and Diet.JS",
   "main": "index.js",
   "scripts": {

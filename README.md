@@ -7,7 +7,7 @@
 
 Usage Example with Diet.JS
 ```
-var server = require('../../')
+var server = require('diet')
 var app = server()
 app.listen('http://localhost:8086/')     // Listen on Localhost
 
@@ -30,15 +30,19 @@ app.use(function (req,res,next) {
 
 // Require the DIREKTSPEED Servers express-middelware module 
 // as dssrv is based on Diet.JS and configure it
-var myExpressApp = require('express-middelware')(require('./express.js')
-var attachExpressApp = myExpressApp.attachExpress
-var useExpressApp = myExpressApp.useExpress
+var myExpressApp = require('express-middelware')(require('./express.js'))
+
+// You can Modify your express app and access it 
+myExpressApp.eapp.use(function(req,res,next) {
+	res.end('Something')
+})
 
 // useExpressApp adds the $.eapp to your signal then you can use it
 // useExpressApp uses directly the express app or middelware and then returns processing to Diet.JS or DIREKTSPEED Server
-app.get('/', attachExpressApp, function($){
+
+app.get('/', myExpressApp.attach, function($){
     $.eapp()
-}, useExpressApp
+}, myExpressApp.use
 , function($){
     $.end('Diet.JS + ' + $.response.values) // -> Diet.JS + Express
 })
