@@ -1,0 +1,26 @@
+{
+  "name": "express-middelware",
+  "version": "1.0.0",
+  "description": "It returns a Express App as function use able by DIREKTSPEED Server and Diet.JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dssrv/express-middelware.git"
+  },
+  "keywords": [
+    "express",
+    "Diet.JS",
+    "DIREKTSPEED",
+    "Server",
+    "dssrv"
+  ],
+  "author": "Frank Lemanschik <frank@dspeed.eu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dssrv/express-middelware/issues"
+  },
+  "homepage": "https://github.com/dssrv/express-middelware#readme"
+}
